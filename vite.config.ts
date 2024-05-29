@@ -1,30 +1,33 @@
-import { defineConfig } from 'vite';
-import path from 'path';
-import react from '@vitejs/plugin-react-swc';
-import dts from 'vite-plugin-dts';
-
+import { defineConfig } from "vite";
+import path from "path";
+import react from "@vitejs/plugin-react-swc";
+import dts from "vite-plugin-dts";
+import postcss from "rollup-plugin-postcss";
 export default defineConfig({
   plugins: [
     react(),
     dts({
       insertTypesEntry: true,
     }),
+    postcss({
+      plugins: [],
+    }),
   ],
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: path.resolve(__dirname, 'src/main.tsx'),
-      name: 'Modal',
-      fileName: 'modal',
+      entry: path.resolve(__dirname, "src/main.tsx"),
+      name: "Modal",
+      fileName: "modal",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",
-          "react-dom": "ReactDOM"
+          "react-dom": "ReactDOM",
         },
       },
     },
   },
-})
+});

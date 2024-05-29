@@ -2,7 +2,7 @@
   "name": "modal-react-vite-ts",
   "description": "A modal component for React or Typescript applications.",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "files": [
     "dist",
@@ -28,7 +28,8 @@
   "dependencies": {
     "modal-react-vite-ts": "^0.0.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2"
   },
   "keywords": [
     "vite",
