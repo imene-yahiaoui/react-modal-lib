@@ -1,30 +1,80 @@
-# React + TypeScript + Vite
+# modal-react-vite-ts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modal component for React and TypeScript applications.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```bash
 
-- Configure the top-level `parserOptions` property like this:
+via npm 
+npm install modal-react-vite-ts
+Or via yarn:
+yarn add modal-react-vite-ts
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+
+**Modal Props**
+
+
+```bash
+
+The Modal component accepts the following props:
+
+
+closeModalFunction: () => void - Function to close the modal.
+
+message: string | null - Message to display inside the modal.
+
+closeBtn: string | null - Text for the close button.
+
+xBtn: string | null - Text for the "X" close button.
+
+closeModalBtn: () => void - Function to execute when the close button is clicked.
+
+
+
+
+**Example Usage**
+
+```bash
+Here is an example usage of the Modal component directly:
+
+import React, { useState } from 'react';
+
+import Modal from 'modal-react-vite-ts';
+
+
+const Example: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  return (
+    <div>
+      <button onClick={openModal}>Show Modal</button>
+      {isModalOpen && (
+        <Modal
+          closeModalFunction={closeModal}
+          message="This is a modal message"
+          closeBtn="Close"
+          xBtn="X"
+          closeModalBtn={closeModal}
+        />
+      )}
+    </div>
+  );
+};
+
+export default Example;
+
+
+
+ 
