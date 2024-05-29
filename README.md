@@ -4,24 +4,26 @@ A modal component for React and TypeScript applications.
 
 ## Installation
 
-Install
 
 
-```bash
+
 
 via npm 
+
 npm install modal-react-vite-ts
+
 Or via yarn:
+
 yarn add modal-react-vite-ts
 
 
 
 
 
-**Modal Props**
+## Modal Props
 
 
-```bash
+ 
 
 The Modal component accepts the following props:
 
@@ -39,14 +41,15 @@ closeModalBtn: () => void - Function to execute when the close button is clicked
 
 
 
-**Example Usage**
+## Example Usage
+
 
 ```bash
 Here is an example usage of the Modal component directly:
 
 import React, { useState } from 'react';
 
-import Modal from 'modal-react-vite-ts';
+import {Modal} from 'modal-react-vite-ts';
 
 
 const Example: React.FC = () => {
