@@ -2,7 +2,7 @@
   "name": "modal-react-vite-ts",
   "description": "A modal component for React or Typescript applications.",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.1.1",
   "type": "module",
   "files": [
     "dist",
@@ -17,7 +17,7 @@
       "import": "./dist/modal.js",
       "require": "./dist/modal.umd.cjs"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/index.css"
   },
   "scripts": {
     "dev": "vite",
@@ -29,7 +29,8 @@
     "modal-react-vite-ts": "^0.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup-plugin-postcss": "^4.0.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "vite-plugin-css-injected-by-js": "^3.5.1"
   },
   "keywords": [
     "vite",

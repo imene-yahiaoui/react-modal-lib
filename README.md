@@ -1,47 +1,37 @@
-# modal-react-vite-ts
+📦 modal-react-vite-ts
 
 A modal component for React and TypeScript applications.
 
-## Installation
-
-
-
-
-
-via npm 
-
-npm install modal-react-vite-ts
+🚀 Installation
+Via npm:
+```bash
+npm install modal-react-vite-ts 
+```
 
 Or via yarn:
 
+```bash
 yarn add modal-react-vite-ts
+```
 
-
-
-
-
-## Modal Props
-
+⚙️ Modal Props
 
  
 
 The Modal component accepts the following props:
 
-
 closeModalFunction: () => void - Function to close the modal.
 
 message: string | null - Message to display inside the modal.
 
-closeBtn: string | null - Text for the close button.
+confirmBtn: string | null - Text for the close button.
 
 xBtn: string | null - Text for the "X" close button.
 
-closeModalBtn: () => void - Function to execute when the close button is clicked.
+handleConfirmClick () => void - Function to execute when the close button is clicked.
 
 
-
-
-## Example Usage
+📝 Example Usage
 
 
 ```bash
@@ -67,9 +57,9 @@ const Example: React.FC = () => {
         <Modal
           closeModalFunction={closeModal}
           message="This is a modal message"
-          closeBtn="Close"
+          confirmBtn="close"
           xBtn="X"
-          closeModalBtn={closeModal}
+          handleConfirmClick={closeModal}
         />
       )}
     </div>
@@ -78,6 +68,6 @@ const Example: React.FC = () => {
 
 export default Example;
 
-
+```
 
  

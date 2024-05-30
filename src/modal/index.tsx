@@ -6,24 +6,24 @@ import "./style.css";
  * @param {Object} props - The props object.
  * @param {Function} props.closeModalFunction - Function to close the modal.
  * @param {string|null} props.message - The message content of the modal.
- * @param {string|null} props.closeBtn - Label for the close button.
+ * @param {string|null} props.confirmBtn - Label for the close button.
  * @param {string|null} props.xBtn - Label for the close 'x' button.
- * @param {Function} props.closeModalBtn - Function to close the modal when a custom close button is clicked.
+ * @param {Function} props.handleConfirmClick - Function to close the modal when a custom close button is clicked.
  * @return {JSX.Element} Modal component.
  */
 interface ModalProps {
   closeModalFunction: () => void;
   message: string | null;
-  closeBtn: string | null;
+  confirmBtn: string | null;
   xBtn: string | null;
-  closeModalBtn: () => void;
+  handleConfirmClick: () => void;
 }
 const Modal: React.FC<ModalProps> = ({
   closeModalFunction,
   message,
-  closeBtn,
+  confirmBtn,
   xBtn,
-  closeModalBtn,
+  handleConfirmClick,
 }) => {
   // Reference to the modal container
   const modalRef = useRef<HTMLDivElement>(null);
@@ -37,11 +37,11 @@ const Modal: React.FC<ModalProps> = ({
       if (e.key === "Escape" || e.key === "Esc") {
         closeModalFunction();
       } else if (e.key === "Enter") {
-        closeModalBtn();
+        handleConfirmClick();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
     // Focus the modal when mounted
     if (modalRef.current) {
@@ -50,9 +50,9 @@ const Modal: React.FC<ModalProps> = ({
 
     // Cleanup
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [closeModalFunction, closeModalBtn]);
+  }, [closeModalFunction, handleConfirmClick]);
 
   /**
    * Prevents event propagation when the modal container is clicked.
@@ -78,8 +78,8 @@ const Modal: React.FC<ModalProps> = ({
           {xBtn}
         </button>
         <h2>{message}</h2>
-        <button className="close-btn" onClick={closeModalBtn}>
-          {closeBtn}
+        <button className="close-btn" onClick={handleConfirmClick}>
+          {confirmBtn}
         </button>
       </div>
     </div>

@@ -2,16 +2,14 @@ import { defineConfig } from "vite";
 import path from "path";
 import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
-import postcss from "rollup-plugin-postcss";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 export default defineConfig({
   plugins: [
     react(),
     dts({
       insertTypesEntry: true,
     }),
-    postcss({
-      plugins: [],
-    }),
+    cssInjectedByJsPlugin(),
   ],
   build: {
     lib: {
