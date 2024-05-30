@@ -1,4 +1,4 @@
-📦 modal-react-vite-ts
+📦 **modal-react-vite-ts**
 
 A modal component for React and TypeScript applications.
 
