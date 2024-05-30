@@ -13,7 +13,6 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      // Could also be a dictionary or array of multiple entry points
       entry: path.resolve(__dirname, "src/main.tsx"),
       name: "Modal",
       fileName: "modal",
