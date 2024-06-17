@@ -69,5 +69,10 @@ const Example: React.FC = () => {
 export default Example;
 
 ```
+## Author
+IMENE IKHLEF YAHIAOUI
 
+
+## License
+This project is licensed under the MIT License.
  
