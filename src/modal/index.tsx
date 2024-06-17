@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./style.css";
+import "../index.css";
 
 /**
  * Modal component to display a dialog box.
