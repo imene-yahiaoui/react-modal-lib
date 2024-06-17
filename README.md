@@ -2,7 +2,18 @@
 
 A modal component for React and TypeScript applications.
 
-🚀 Installation
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Node.js**: v14.0.0 or higher
+
+- **Text Editor**: It is recommended to use Visual Studio Code or another code editor of your choice.
+
+## 🚀Installation
+ 
+
 Via npm:
 ```bash
 npm install modal-react-vite-ts 
@@ -14,7 +25,7 @@ Or via yarn:
 yarn add modal-react-vite-ts
 ```
 
-⚙️ Modal Props
+## ⚙️ Modal Props
 
  
 
@@ -31,11 +42,12 @@ xBtn: string | null - Text for the "X" close button.
 handleConfirmClick () => void - Function to execute when the close button is clicked.
 
 
-📝 Example Usage
+## 📝 Example Usage
 
+Here is an example usage of the Modal component directly:
 
 ```bash
-Here is an example usage of the Modal component directly:
+
 
 import React, { useState } from 'react';
 
@@ -70,9 +82,12 @@ export default Example;
 
 ```
 ## Author
-IMENE IKHLEF YAHIAOUI
+
+Name: Imene Ikhlef Yahiaoui
+
+Email: ikhlefyahiaoui.imene@gmail.com
 
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for details.
  
