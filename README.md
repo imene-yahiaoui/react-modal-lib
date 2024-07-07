@@ -2,6 +2,8 @@
 
 A modal component for React and TypeScript applications.
 
+## The link to the npm library 📦: https://www.npmjs.com/package/modal-react-vite-ts
+
 
 ## Prerequisites
 
